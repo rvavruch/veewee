@@ -56,6 +56,7 @@ rm VBoxGuestAdditions_$VBOX_VERSION.iso
 sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
 sed -i "s/_XKB_CHARSET XAUTHORITY/PATH _XKB_CHARSET XAUTHORITY/" /etc/sudoers
 
-#poweroff -h
+echo 'PATH=$PATH:/usr/local/bin' >> /root/.bashrc
+echo 'export PATH' >> /root/.bashrc
 
 exit
